@@ -1,0 +1,7 @@
+# eclipse
+.buildpath
+.project
+.settings/
+
+# config
+application/configs/application.ini
