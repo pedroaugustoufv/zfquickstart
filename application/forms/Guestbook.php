@@ -13,11 +13,17 @@ class Application_Form_Guestbook extends Zend_Form
             'required'   => true,
             'filters'    => array('StringTrim'),
             'validators' => array(
-                array(
+            	array(
+            		'validator' => 'NotEmpty',
+            		'options' => array(
+            			'messages' => 'Campo obrigatório'
+            		)
+            	),
+            	array(
                 	'EmailAddress', true, array(
 	                    'messages' => array(
 	                    	'emailAddressInvalid' => 'E-mail inválido',
-	                    	'emailAddressInvalidFormat' => 'Formato de e-mail inválido'
+	                    	'emailAddressInvalidFormat' => "'%value%' Formato de e-mail inválido"
 	                    )
 	                )
                 )
