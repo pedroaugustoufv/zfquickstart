@@ -12,9 +12,11 @@ class Album_AlbumController extends Zend_Controller_Action
      *  lista os albuns cadastrados
      */
 	public function indexAction()
-	{
+	{	
 		// instancia o album table
-		$albumTable = new Album_Model_DbTable_AlbumTable();
+		$albumTable = new Album_Model_AlbumTable();
+		
+		// recupera os albuns existente a atribui a variavel entries da visao
 		$this->view->entries = $albumTable->fetchAll();
 	}
 	
@@ -44,7 +46,7 @@ class Album_AlbumController extends Zend_Controller_Action
 				$album->populate($formData);
 				
 				// instancia dbTable para album
-				$albumTable = new Album_Model_DbTable_AlbumTable();
+				$albumTable = new Album_Model_AlbumTable();
 				
 				// salva o album
 				$albumTable->saveAlbum($album);
@@ -86,7 +88,7 @@ class Album_AlbumController extends Zend_Controller_Action
 				$album->populate($formData);
 				
 				// instancia dbTable para album
-				$albumTable = new Album_Model_DbTable_AlbumTable();
+				$albumTable = new Album_Model_AlbumTable();
 				
 				// salva o album
 				$albumTable->saveAlbum($album);
@@ -103,7 +105,7 @@ class Album_AlbumController extends Zend_Controller_Action
 			
 			if ($id > 0) {
 				// instancia o album table
-				$album = new Album_Model_DbTable_AlbumTable();
+				$album = new Album_Model_AlbumTable();
 				
 				// preenche o formulario com o valor do album para o id solicitado
 				$form->populate($album->getAlbum($id));
@@ -132,7 +134,7 @@ class Album_AlbumController extends Zend_Controller_Action
 				$id = $this->getRequest()->getPost('id');
 				
 				// instancia o table para o album
-				$albumTable = new Album_Model_DbTable_AlbumTable();
+				$albumTable = new Album_Model_AlbumTable();
 				
 				// remove o album pelo seu id
 				$albumTable->deleteAlbum($id);
@@ -145,7 +147,7 @@ class Album_AlbumController extends Zend_Controller_Action
 			$id = $this->_getParam('id', 0);
 			
 			// instancia o table para o album
-			$albumTable = new Album_Model_DbTable_AlbumTable();
+			$albumTable = new Album_Model_AlbumTable();
 			
 			// recupera as informacoes do album pelo id e atribui a variavel album da visao
 			$this->view->album = $albumTable->getAlbum($id);

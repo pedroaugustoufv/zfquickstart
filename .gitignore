@@ -1,7 +1,10 @@
 # eclipse
 .buildpath
 .project
-.settings/
+.settings/*
 
 # config
 application/configs/application.ini
+
+#captcha
+public/captcha/*

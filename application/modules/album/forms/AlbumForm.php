@@ -61,8 +61,9 @@ class Album_Form_AlbumForm extends Zend_Form
 
         // Add the submit button
         $this->addElement('submit', 'submit', array(
-            'ignore'   => true,
-            'label'    => 'Cadastrar',
+            'ignore' 	=> true,
+            'label' 	=> 'Cadastrar',
+        	'class' 	=> 'btn btn-success'
         ));
 
         // And finally add some CSRF protection
@@ -70,7 +71,7 @@ class Album_Form_AlbumForm extends Zend_Form
             'ignore' => true,
         	'errorMessages' => array(
             	'notSame' => 'Token diferente do esperado',
-        		'missingToken' => 'Token não encontrado',
+        		'missingToken' => 'Token não encontrado'
             )
         ));
     }

@@ -1,9 +1,9 @@
 <?php
-$this->title = "Meus Albums";
+$this->title = "Meus albuns";
 $this->headTitle($this->title);
 ?>
 <div class="container">
-	<p><a href="<?php echo $this->url(array('module' => 'album', 'controller'=>'album','action'=>'add'));?>">Add novo album</a></p>
+	<p><a class="btn btn-large btn-success" href="<?php echo $this->url(array('module' => 'album', 'controller'=>'album','action'=>'add'));?>">Add novo album</a></p>
 	<div class="table-responsive">
 		<table class="table">
 			<thead>     
