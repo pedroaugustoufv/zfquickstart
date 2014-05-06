@@ -23,7 +23,7 @@ class Album_AlbumController extends Zend_Controller_Action
 	 */
 	function addAction()
 	{
-		// instancia o formulario do album
+		// instancia o formulario album
 		$form = new Album_Form_AlbumForm();
 		
 		// altera o valor do botao submit
