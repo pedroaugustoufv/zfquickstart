@@ -1,6 +1,6 @@
 <?php
 
-class Application_Model_Guestbook
+class Guestbook_Model_Guestbook
 {
     protected $_comment;
     protected $_created;
