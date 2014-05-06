@@ -1,0 +1,24 @@
+<?php echo $this->doctype() ?>
+<html lang="pt-br">
+ 	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+		<title>Zend Framework Quickstart Application</title>
+		<?php echo $this->headLink()->appendStylesheet('/css/bootstrap.min.css')
+									->appendStylesheet('/css/style.css');
+		?>
+	</head>
+	<body>		
+		<div id="content">
+			<?php echo $this->layout()->content ?>
+		</div>
+		
+		<?php
+			echo $this->headScript()->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+									->appendFile('/js/bootstrap.min.js');
+		?>
+	</body>
+</html>
