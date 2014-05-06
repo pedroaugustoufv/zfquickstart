@@ -30,7 +30,7 @@ class Album_Model_DbTable_AlbumTable extends Zend_Db_Table_Abstract
 				var_dump($e->getMessage());
 			}
 		} else {
-			$this->getDbTable()->update($data, array('id = ?' => $id));
+			$this->update($data, array('id = ?' => $id));
 		}
 	}
 	
